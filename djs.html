@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+
+		<span id='t_d'>00 天</span>
+		<span id='t_h'>00 时</span>
+		<span id='t_m'>00 分</span>
+		<span id='t_s'>00 秒</span>
+
+</body>
+</html>
+
+<script>
+
+	
+	function Tme()
+	{
+		var endtime= new Date('2019/10/1  00:00:00');
+		var nowtime= new Date();
+		var t= endtime.gettime() - nowtime.gettime();
+
+		var d= (t/1000/60/60%24);
+		var h=	(t/1000/60/60%60);
+		var m= 	(t/1000/60%60);
+		var s=  (t/1000%60);
+
+
+		document.getElementById('t_d').innerHTML() = d +" 天";
+		document.getElementById('t_h').innerHTML() = h +" 时";
+		document.getElementById('t_m').innerHTML() = m +" 分";
+		document.getElementById('t_s').innerHTML() = s +" 秒";
+	}
+	setInterval(tme,1000);
+</script>
